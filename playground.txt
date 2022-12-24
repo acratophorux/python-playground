@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#B9002D" name="theme-color"/>
+  <link as="style" href="/search/dist/orm.135d634eda023ae4a333.css" rel="preload"/>
+  <link as="style" href="/search/dist/main.22220f8f180dd98f96c0.css" rel="preload"/>
+  <link as="font" crossorigin='"anonymous"' href="https://cdn.oreillystatic.com/fonts/GuardianText/GuardianTextSans-Medium-Web.woff2" rel="preload" type="font/woff2"/>
+  <link as="font" crossorigin='"anonymous"' href="https://cdn.oreillystatic.com/fonts/GuardianText/GuardianTextSans-Regular-Web.woff2" rel="preload" type="font/woff2"/>
+  <link href="//www.oreilly.com/favicon.ico" rel="shortcut icon"/>
+  <title>
+   Search
+  </title>
+  <link href="/search/dist/orm.135d634eda023ae4a333.css" rel="stylesheet"/>
+  <link href="/search/dist/main.22220f8f180dd98f96c0.css" rel="stylesheet"/>
+  <script src="https://www.datadoghq-browser-agent.com/datadog-rum-us.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   if (window.DD_RUM) {
+          DD_RUM.init({
+            clientToken: 'pub6c6047e16a039821eccb84b73b72f4ce',
+            applicationId: 'd635a68b-ae3b-477d-9bc6-e1fec1d2af45',
+            sampleRate: Number('' || 10)
+          });
+          DD_RUM.addRumGlobalContext('service', 'search_frontend-browser');
+          DD_RUM.addRumGlobalContext('env', 'production');
+        }
+  </script>
+  <script type="text/javascript">
+   // NB: some ORM content contains close script tags as strings and trips up the browser's HTML parser
+      window.initialStoreData = {"environment":{"origin":"https://internal.platform.gcp.oreilly.com","env":"production","nodeEnv":"production","apiPath":"/api/web/search","ingressedPaths":["/search"],"basePath":"/search","publicPath":"/search/dist/","routerBasePath":"/search"},"jwt":{"_loadingState":"FAILURE","_error":"No jwt on request."},"ldFeatureFlags":{"_loadingState":"SUCCESS","_error":null,"aBadFlagname":false,"allowReaderPagingIos":false,"androidEnableAmplitude":true,"androidEnableFullstory":false,"androidEnableMarketingCloudSdk":false,"answersExcludeVideo":false,"askForReviewsIos":true,"assignmentsBffGraphql":false,"attendSponsorships":true,"betaSegmentNote":false,"boostForAuthorAndPublisherQueries":false,"cacheSearchResultsInSessionStorage":false,"certificationsHidePracticeExams":false,"certificationsPartnerOutage":false,"certificationsShowPeLink":false,"chassisHelloToggle":false,"classifyLiveEventSeriesFromContentMessages":false,"conferencesDroid":true,"contentPlaygroundPrototype":true,"contentSearchExperiment":false,"copyHighlightLink":false,"disableIngestionPortal":{"disable_portal":false,"disable_ftp_processing":false},"disableLocalTrainingNotificationsIos":false,"disableViewNotebook":false,"displayAudiobooks":true,"displayJalapenoPoppers":true,"displayOneTrustEmbed":false,"displayVerticalFilters":false,"dsExperienceTest":"","eisDisableSampleUploads":true,"enableAmplitudeIos":true,"enableAnswersClient":false,"enableBookmarks":false,"enableCloudScenarios":false,"enableContentPlaygroundFrontend":false,"enableDocumentClient":false,"enableEpubDiffProcessing":true,"enableFeatherHeronAuth":false,"enableFeedbackLink":false,"enableFsOnSearch":false,"enableFullAudiobooksExperience":false,"enableFullstoryIos":false,"enableHomepage":false,"enableInvitationsFe":true,"enableJonesTest":false,"enableLargeMessagesVmsIngestion":true,"enableMagpieImagesOnCerts":true,"enableMedsGrootEtSync":true,"enableNewRegisterPage":true,"enableNewSignupPage":false,"enableNewSubscribePage":false,"enableOptimizeMultiselect":true,"enableOrmChromeExtension":false,"enablePauseSubscriptionPage":false,"enablePayPalChoiceButtonInNewPaymentsClient":true,"enablePaymentsPriceTiers":false,"enablePdsV1AlphaContentIngestionMessages":true,"enablePdsV1AlphaProductIngestionMessages":true,"enableRatePlanCallouts":true,"enableRokuFiretv":false,"enableSemiAnnualPlan":false,"enableSignup":true,"enableSpeedReaderInSearch":false,"enableTeamSetupPage":false,"enableThreeMonthPlan":true,"enableTimeBasedUsageAndroid":false,"enableTimeBasedUsageIos":false,"enableTopicGraphV1AlphaContentIngestionMessages":true,"enableTvApps":false,"enableUserManagement":true,"enableUserManagementClient":false,"enableWebsite":false,"enableWorkbooks":false,"enableYourAccountLink":true,"enabledThirdPartyAuthProviders":["facebook","corporate","twitter","google-oauth2","linkedin-oauth2","apple-id"],"excludeClosedLiveEvents":true,"falconCisUrls":false,"falconCisUrlsForLp":false,"falconLpRefidUrl":true,"feChassisHelloEnableConfirm":false,"focusSearchBarShortcut":false,"heronHandlesPaymentErrors":false,"heronReaderIgnoreUsageIsComplete":false,"homeEnableAnswersAnimation":false,"interactiveContent":true,"interactivePracticeExamDropdownFilterEnabled":false,"jupyterNotebookInSearch":false,"jupyterV1Web":true,"labsMvpTemplate":false,"labsOrmStaff":false,"learningPathsDroid":true,"listenForSubscriptionRenewalMessages":true,"liveEventDetailsPage":false,"liveEventFullProductMessageIngestion":false,"liveEventIngestFromProductMessage":true,"liveEventInteractivity":false,"liveEventRecurringRegistration":true,"liveEventSendContentMessages":false,"liveEventSeriesPage":false,"liveEventSponsorshipEmails":true,"liveEventUserRegConsumeContentMessages":false,"liveEventsCardEnhancements":true,"liveEventsEnableCaching":false,"liveEventsTimezoneFilter":true,"logLowRecaptchaScores":0.5,"manyToManySsoDevTools":false,"marcShowBanner":false,"moreSearchResultTypes":false,"multilateralFederatedAuthIntegrationAnybird":true,"multilateralFederatedAuthIntegrationFe":false,"oreillyLabs":false,"paymentsClientShowComparePlansLink":false,"paymentsClientShowYourDevicesLink":false,"pearsonInteractiveInside":false,"playlistAccountSharing":true,"practiceExamsInSearch":true,"publicPlaylistsAndroid":true,"rainbowHeadlines":true,"redirectLegacyOauthCompletions":true,"redirectResultsWithWebUrl":true,"salesforceServiceEnableGrootConsumers":true,"salesforceServiceEnableMessengerConsumers":true,"sandboxScenariosInSearch":true,"searchBarVariation":"{\"experiment\": \"None\", \"variation\": \"None\"}","searchJudgement":false,"searchRelevanceTuning":{"highlight":false,"pqf":{"content_unstemmed":2000,"title_unstemmed":900,"topic_keywords":600,"topic_names":1000,"chapter_title_unstemmed":2000},"qf":{"content":100,"title":50,"topic_keywords":50,"topic_names":50,"chapter_title":100,"chapter_title_unstemmed":100},"tie":0.6,"boost":"if(termfreq(content_type,'chapter'),1.5,1)","collapse":true},"seatCountMismatchThresholds":{"seat_capacity_percentage":0.95,"difference_percentage":0.05},"selfRegistrationRollout":false,"sendCanonProductMessage":true,"sendDeviceTokensToMarketingCloud":false,"sendTransactionalEmails":true,"shouldCauseCrashIos":false,"shouldUseUnifiedHistoryIos":false,"showInternalToolsIos":false,"showLinkAppleIcon":true,"showPaymentsNotificationAlert":false,"showReminderBarPerLd":false,"showScenariosInSearch":true,"showSearchResultTopic":true,"showUserDetails":true,"solrFieldAlias":false,"syncGrootPasswords":true,"teachBeta":true,"topicsV2ViewContentCounts":false,"universalContentViewerConfig":{"/library/view/":true,"/videos/":true,"/learning-paths/":true},"useJsonFacetsInSerp":true,"useMultiselectFacetsInSerp":false,"useNewInvitationUrls":true,"validateInteractivityProxyUrl":false,"videoIntestionServiceUseTranscriptionService":true,"visAutoTranscription":{"prefixes":["9781491964149","9781491944363","9781491932643","9781491942352","9781492026075","9781491976227","9781491919163","9781491921685","9781491963937","9781491979297","9781491932148","9781491995952","9781491985472","9781491934777","9781491932636"]},"whatIsJupyterNotebookLink":true},"navigationAndAnnouncements":{"announcements":[],"links":{"header":[{"name":"Enterprise","link":"/enterprise/","icon":"","groups":["header"],"children":[]},{"name":"Pricing","link":"/pricing/","icon":"","groups":["header"],"children":[]}],"footer":[{"name":"About O’Reilly","link":"/about/","icon":"","groups":["footer"],"children":[]},{"name":"Teach/write/train","link":"/work-with-us.html","icon":"","groups":["footer"],"children":[]},{"name":"Careers","link":"/careers/","icon":"","groups":["footer"],"children":[]},{"name":"Community partners","link":"/partner/signup.csp","icon":"","groups":["footer"],"children":[]},{"name":"Affiliate program","link":"/affiliates/","icon":"","groups":["footer"],"children":[]},{"name":"Diversity","link":"/diversity/","icon":"","groups":["footer"],"children":[]},{"name":"Support","link":"/online-learning/support/","icon":"","groups":["footer"],"children":[]},{"name":"Contact us","link":"/about/contact.html","icon":"","groups":["footer"],"children":[]},{"name":"Newsletters","link":"https://www.oreilly.com/emails/newsletters/","icon":"","groups":["footer"],"children":[]}],"fineprint":[{"name":"Terms of Service","link":"https://www.oreilly.com/terms/","icon":"","groups":["fineprint"],"children":[]},{"name":"Privacy Policy","link":"/privacy","icon":"","groups":["fineprint"],"children":[]},{"name":"Editorial Independence","link":"/about/editorial_independence.html","icon":"","groups":["fineprint"],"children":[]}],"social":[{"name":"Twitter","link":"https://twitter.com/oreillymedia","icon":"twitter","groups":["social"],"children":[]},{"name":"Facebook","link":"https://www.facebook.com/OReilly","icon":"facebook","groups":["social"],"children":[]},{"name":"LinkedIn","link":"https://www.linkedin.com/company/oreilly-media","icon":"linkedin","groups":["social"],"children":[]},{"name":"YouTube","link":"https://www.youtube.com/user/OreillyMedia","icon":"youtube","groups":["social"],"children":[]}]}},"user":{"error":"User is not authenticated"},"userInfo":{"meta":{"error":"User is not authenticated"},"profile":{"error":null},"usageStatus":{"error":null}},"userProfile":{"_loadingState":"INITIAL"},"availablePoppers":{"data":{"facets":{"facet_fields":{"format":{"article":0,"audiobook":0,"book":0,"certs practice exam":0,"journal":0,"learning path":0,"live online training":0,"notebook":0,"playlists":0,"sandbox":0,"scenario":0,"video":0}}}},"error":null,"status":"INITIAL"},"judgements":{"judgementActive":false},"playlistsCoreState":{"mostRecentPlaylistIds":[],"playlists":{"error":"","eTag":"","fetching":true,"loaded":false,"playlists":[],"sharingEnabled":false},"playlistActions":{"updatingSharing":false,"sharingErrors":{}},"playlistSSR":{"error":"","fetching":false,"loaded":false,"playlist":{}},"sharedPlaylist":{"error":"","fetching":false,"loaded":false,"playlist":{}}},"poppers":{"activePopper":"All"},"reportsState":{"batchReports":[],"titleReports":{},"usersReport":{},"batchReportsIsFetching":false,"batchReportsDidError":false,"titleReportsIsFetching":false,"titleReportsDidError":false,"createReviewIsTrying":false,"createReviewDidSucceed":false,"createReviewDidError":false,"deleteReviewIsTrying":false,"deleteReviewDidSucceed":false,"deleteReviewDidError":false},"relevance":{"fetchError":null,"postError":null,"fetchLoading":false,"postLoading":false,"relevanceData":null},"appState":{"queryUrl":"/search/","data":null,"facets":{},"poppers":{},"error":null,"loading":true,"user":{"user_identifier":"","primary_account":"","academic_institution":false}},"searchState":{"queryJson":{},"queryUrl":"/search/"},"liveEventsState":{"error":"","fetching":true,"loaded":false,"liveEvents":{}}};
+  </script>
+  <script type="text/javascript">
+   window.orm = window.orm || {};
+      
+      window.orm.redirect = function redirect(url) {
+        window.location.assign(url);
+      };
+      window.orm.logger = console;
+  </script>
+  <script src="//fast.appcues.com/48743.js">
+  </script>
+  <script>
+   // Disable analytics when hit from DD synthetics browser
+        if (window._DATADOG_SYNTHETICS_BROWSER === undefined) {
+          if (window.initialStoreData && window.initialStoreData.userInfo.meta
+            && window.initialStoreData.userInfo.meta.user_identifier) {
+            var user = window.initialStoreData.userInfo.meta;
+            var dataLayer = window.dataLayer || [];
+
+            // Set user/session info
+            window.medalliaDsUserIdentifier = user.user_identifier;
+            window.medalliaDsSessionIdentifier = user.sessionid;
+            dataLayer.push({ userIdentifier: user.user_identifier });
+            dataLayer.push({ loggedIn: 'yes' });
+
+            // Set account/org info
+            window.medalliaDsAccountIdentifier = user.primary_account;
+            if (!user.individual) {
+              dataLayer.push({ orgID: user.primary_account });
+            }
+
+            // Set account type
+            window.medalliaDsIsIndividual = user.individual;
+            if (user.individual) {
+              if (user.subscription && user.subscription.active) {
+                dataLayer.push({learningAccountType: 'individual'});
+              } else if (user.is_trial) {
+                dataLayer.push({learningAccountType: 'free trial'});
+              }
+            } else {
+              if (user.academic_institution) {
+                dataLayer.push({learningAccountType: 'academic'});
+                window.medalliaDsIsAcademicInstitution = true;
+              } else {
+                dataLayer.push({learningAccountType: 'enterprise'});
+              }
+            }
+
+            // Set paid account
+            if (user.subscription && user.subscription.active) {
+              dataLayer.push({ learningPaidAccount: 'yes' });
+            }
+          }
+
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer', 'GTM-5P4V6Z');
+        }
+  </script>
+  <script defer="" src="/search/dist/orm.b8f60441adb98061c5da.js">
+  </script>
+  <script defer="" src="/search/dist/main.88cfe3dbd813c7b8d232.js">
+  </script>
+ </head>
+ <body>
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5P4V6Z" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <div id="root">
+   <div class="orm-ff-Shell-anonShell__wrapper">
+    <a class="orm-ff-Shell-skipLink" href="#main">
+     Skip to content
+    </a>
+    <header class="orm-ff-AnonymousNavigation-root orm-ff-AnonymousNavigation-noBoxShadow">
+     <div class="orm-ff-AnonymousNavigation-navMenu">
+      <div class="orm-ff-AnonymousNavigation-newLogo__bg">
+       <div class="orm-ff-AnonymousNavigation-newLogo__container" data-testid="nav-logo">
+        <a data-testid="anon-nav-logo" href="/" title="home page">
+         <img alt="O'Reilly home" class="orm-ff-AnonymousNavigation-newLogo__image" src="https://cdn.oreillystatic.com/images/sitewide-headers/oreilly_logo_mark_red.svg"/>
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="orm-ff-AnonymousNavigation-mobile__wrapper">
+      <div class="orm-ff-SearchBarMobileMenu-root">
+       <div>
+        <button aria-label="search" class="orm-Button-root orm-ff-SearchBarMobileMenu-searchMobileMenuButton orm-ff-AnonymousNavigation-searchMobileMenu__button">
+         <span class="orm-Button-btnContentWrap">
+          <span class="orm-Icon-root" data-testid="icon" style="height:1.5rem">
+           <span aria-hidden="true" class="orm-Icon-icon orm-icon-search" style="font-size:1.5rem;width:1.5rem;height:1.5rem">
+           </span>
+           <span class="orm-Icon-title">
+            search
+           </span>
+          </span>
+         </span>
+        </button>
+        <div>
+        </div>
+       </div>
+      </div>
+      <div class="orm-ff-AnonymousNavigationMobileMenu-root">
+       <div>
+        <button aria-expanded="false" aria-label="open menu" class="orm-Button-root orm-ff-AnonymousNavigationMobileMenu-anonNavMobileMenu__button orm-ff-AnonymousNavigation-menuMobileMenu__button orm-ff-AnonymousNavigation-menuMobileMenu__button">
+         <span class="orm-Button-btnContentWrap">
+          <span class="orm-Icon-root" data-testid="icon" style="height:1.5rem">
+           <span aria-hidden="true" class="orm-Icon-icon orm-icon-menu" style="font-size:1.5rem;width:1.5rem;height:1.5rem">
+           </span>
+           <span class="orm-Icon-title">
+            menu
+           </span>
+          </span>
+         </span>
+        </button>
+        <div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="orm-ff-Shell-main orm-ff-Shell-collapsedMain" id="main" tabindex="-1">
+     <div class="Search--W1dqz" data-testid="search">
+      <div class="anonContainer--Bgr0y" data-container="true" data-testid="searchContainer">
+       <header data-search-header="true">
+       </header>
+       <section class="Results--amUWr" data-search-results="false">
+        <div class="orm-LoadingModule-loading">
+         <span class="orm-LoadingODot-oDot_wrapper" data-testid="loadingODot">
+          <span class="orm-LoadingODot-oDotRing orm-LoadingODot-oDotRing_small orm-LoadingODot-oDotRing__animate">
+           <span class="orm-LoadingODot-oDotOverRing_svg">
+            <svg viewBox="0 0 100 100" x="0px" y="0px">
+             <circle class="orm-LoadingODot-oDotRing_circle orm-LoadingODot-oDotRing_red orm-LoadingODot-oDotOverRing_circle" cx="50" cy="50" r="40">
+             </circle>
+            </svg>
+           </span>
+           <span class="orm-LoadingODot-oDotMidRing_svg orm-LoadingODot-oDotMidRing_svg__animate">
+            <svg viewBox="0 0 100 100" x="0px" y="0px">
+             <circle class="orm-LoadingODot-oDotRing_circle orm-LoadingODot-oDotRing_red" cx="50" cy="50" r="40">
+             </circle>
+            </svg>
+           </span>
+           <span class="orm-LoadingODot-oDotUnderRing_svg">
+            <svg viewBox="0 0 100 100" x="0px" y="0px">
+             <circle class="orm-LoadingODot-oDotRing_circle orm-LoadingODot-oDotRing_red" cx="50" cy="50" r="40">
+             </circle>
+            </svg>
+           </span>
+          </span>
+          <span class="orm-LoadingODot-oDot orm-LoadingODot-oDot_small">
+           <svg viewBox="0 0 100 100" x="0px" y="0px">
+            <circle class="orm-LoadingODot-oDot_circle orm-LoadingODot-oDot_red" cx="50" cy="50" r="40">
+            </circle>
+           </svg>
+          </span>
+         </span>
+         <p class="orm-LoadingModule-loading__headline">
+          Hang tight. This’ll take just a sec.
+         </p>
+         <p class="orm-LoadingModule-loading__subtitle">
+          Now’s a good time to stretch.
+         </p>
+        </div>
+       </section>
+       <footer data-search-pagination="true">
+       </footer>
+      </div>
+     </div>
+    </main>
+    <footer class="orm-ff-AnonymousFooter-root orm-ff-Shell-anonFooter" role="contentinfo">
+     <div class="orm-Grid-root orm-container">
+      <div class="orm-row orm-Grid-root">
+       <ul class="orm-Grid-root orm-ff-AnonymousFooter-textLinks orm-ff-AnonymousFooter-textLinksUl orm-col-medium-8 orm-col-small-960-8 orm-col-small-8 orm-col-xsmall-600-8 orm-col-xsmall-4">
+        <li>
+         <a href="/about/">
+          About O’Reilly
+         </a>
+        </li>
+        <li>
+         <a href="/work-with-us.html">
+          Teach/write/train
+         </a>
+        </li>
+        <li>
+         <a href="/careers/">
+          Careers
+         </a>
+        </li>
+        <li>
+         <a href="/partner/signup.csp">
+          Community partners
+         </a>
+        </li>
+        <li>
+         <a href="/affiliates/">
+          Affiliate program
+         </a>
+        </li>
+        <li>
+         <a href="/diversity/">
+          Diversity
+         </a>
+        </li>
+        <li>
+         <a href="/online-learning/support/">
+          Support
+         </a>
+        </li>
+        <li>
+         <a href="/about/contact.html">
+          Contact us
+         </a>
+        </li>
+        <li>
+         <a href="https://www.oreilly.com/emails/newsletters/">
+          Newsletters
+         </a>
+        </li>
+       </ul>
+       <div class="orm-Grid-root orm-ff-AnonymousFooter-iconLinks orm-col-medium-4 orm-col-small-960-4 orm-col-small-4 orm-col-xsmall-600-8 orm-col-xsmall-4">
+        <ul>
+         <li>
+          <a href="https://twitter.com/oreillymedia">
+           <span class="orm-Icon-root" data-testid="icon" style="height:1.5rem">
+            <span aria-hidden="true" class="orm-Icon-icon orm-icon-twitter" style="font-size:1.5rem;width:1.5rem;height:1.5rem">
+            </span>
+            <span class="orm-Icon-title">
+             twitter
+            </span>
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="https://www.facebook.com/OReilly">
+           <span class="orm-Icon-root" data-testid="icon" style="height:1.5rem">
+            <span aria-hidden="true" class="orm-Icon-icon orm-icon-facebook" style="font-size:1.5rem;width:1.5rem;height:1.5rem">
+            </span>
+            <span class="orm-Icon-title">
+             facebook
+            </span>
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="https://www.linkedin.com/company/oreilly-media">
+           <span class="orm-Icon-root" data-testid="icon" style="height:1.5rem">
+            <span aria-hidden="true" class="orm-Icon-icon orm-icon-linkedin" style="font-size:1.5rem;width:1.5rem;height:1.5rem">
+            </span>
+            <span class="orm-Icon-title">
+             linkedin
+            </span>
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="https://www.youtube.com/user/OreillyMedia">
+           <span class="orm-Icon-root" data-testid="icon" style="height:1.5rem">
+            <span aria-hidden="true" class="orm-Icon-icon orm-icon-youtube" style="font-size:1.5rem;width:1.5rem;height:1.5rem">
+            </span>
+            <span class="orm-Icon-title">
+             youtube
+            </span>
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="https://www.oreilly.com/emails/newsletters/">
+           <span class="orm-Icon-root" data-testid="icon" style="height:1.5rem">
+            <span aria-hidden="true" class="orm-Icon-icon orm-icon-email" style="font-size:1.5rem;width:1.5rem;height:1.5rem">
+            </span>
+            <span class="orm-Icon-title">
+             email
+            </span>
+           </span>
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="orm-row orm-Grid-root">
+       <div class="orm-Grid-root orm-col-medium-8 orm-col-small-960-8 orm-col-small-8 orm-col-xsmall-600-8 orm-col-xsmall-4">
+        <div class="orm-ff-AnonymousFooter-copyright">
+         ©
+         <!-- -->
+         2022
+         <!-- -->
+         O’Reilly Media, Inc. All trademarks and registered trademarks appearing on oreilly.com are the property of their respective owners.
+        </div>
+        <div class="orm-ff-AnonymousFooter-smallLinks">
+         <ul>
+          <li>
+           <a href="https://www.oreilly.com/terms/">
+            Terms of Service
+           </a>
+          </li>
+          <li>
+           <a href="/privacy">
+            Privacy Policy
+           </a>
+          </li>
+          <li>
+           <a href="/about/editorial_independence.html">
+            Editorial Independence
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+ </body>
+</html>
