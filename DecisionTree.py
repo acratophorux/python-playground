@@ -1,3 +1,34 @@
+###   This code defines a decision tree classifier in Python using the NumPy library. The decision tree is a supervised machine learning algorithm that can be used for classification or regression tasks. It works by building a tree-like model of decisions based on the features of the input data.
+
+###   The code consists of two main classes: Node and DecisionTree. The Node class represents a node in the decision tree, and it has several attributes:
+
+#       feature: the feature used to split the data at this node
+#       threshold: the threshold used to split the data at this node
+#       left: a reference to the left child node
+#       right: a reference to the right child node
+#       value: the predicted value of this node, if it is a leaf node
+
+###   The DecisionTree class represents the decision tree model, and it has several attributes and methods:
+
+#       max_depth: the maximum depth of the tree (i.e., the maximum number of nodes from the root to a leaf)
+#       min_samples_split: the minimum number of samples required to split a node
+#       root: a reference to the root node of the tree
+#       _is_finished(): a helper method that determines whether the tree building process should stop at the current node
+#       _build_tree(): a recursive method that builds the tree by finding the best split at each node and growing the children nodes
+#       fit(): a method that trains the decision tree model on a given dataset
+#       _traverse_tree(): a recursive method that traverses the tree and returns the predicted value for a given input sample
+#       predict(): a method that predicts the output for a given input dataset
+#       _entropy(): a helper method that calculates the entropy of a given target variable
+#       _create_split(): a helper method that splits a dataset based on a given threshold
+#       _information_gain(): a helper method that calculates the information gain of a given split
+#       _best_split(): a helper method that finds the best split for a given feature
+
+###   The fit() method is used to train the decision tree model on a given dataset. It starts by calling the _build_tree() method, which builds the tree recursively. At each node, the method finds the best split by iterating over the features and threshold values and selecting the split that maximizes the information gain. The process continues until the stopping criteria are met (e.g., maximum depth, minimum number of samples, etc.).
+
+###   The predict() method is used to predict the output for a given input dataset. It calls the _traverse_tree() method for each input sample, which traverses the tree and returns the predicted value for that sample.
+
+
+
 import numpy as np
 
 class Node:
@@ -44,7 +75,11 @@ class DecisionTree:
         return Node(best_feat, best_thresh, left_child, right_child)
 
     def fit(self, X, y):
-        self.root = self._build_tree(X, y)
+        self.root = self._build_tree(X, y) # root will be populated last
+    
+    def predict(self, X):
+        predictions = [self._traverse_tree(x, self.root) for x in X]
+        return np.array(predictions)
 
     def _traverse_tree(self, x, node : Node):
         if node.is_leaf():
@@ -53,10 +88,6 @@ class DecisionTree:
         if x[node.feature] <= node.threshold:
             return self._traverse_tree(x, node.left)
         return self._traverse_tree(x, node.right)
-    
-    def predict(self, X):
-        predictions = [self._traverse_tree(x, self.root) for x in X]
-        return np.array(predictions)
 
     def _entropy(self, y):
         proportions = np.bincount(y) / len(y)
@@ -65,6 +96,8 @@ class DecisionTree:
         return entropy
     
     def _create_split(self, X, thresh):
+        # X is a feature column
+		# returns two arrays of indices: one for rows where `X <= thresh` and one for rows where `X <= thresh`
         left_idx = np.argwhere(X <= thresh).flatten()
         right_idx = np.argwhere( X > thresh).flatten()
         return left_idx, right_idx
