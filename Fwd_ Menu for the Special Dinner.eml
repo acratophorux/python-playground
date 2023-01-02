@@ -1,0 +1,419 @@
+Delivered-To: kumardinesh.deon@gmail.com
+Received: by 2002:a17:906:1485:0:0:0:0 with SMTP id x5csp3358851ejc;
+        Wed, 28 Dec 2022 01:33:56 -0800 (PST)
+X-Received: by 2002:a1f:9eca:0:b0:3c6:bdf4:695b with SMTP id h193-20020a1f9eca000000b003c6bdf4695bmr9051012vke.5.1672220035928;
+        Wed, 28 Dec 2022 01:33:55 -0800 (PST)
+ARC-Seal: i=5; a=rsa-sha256; t=1672220035; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=mVlLY0KPLP+EdplAqwTfk0y/PVYrOTrB4lNgOSRgNon1znI/0lDS1RzZXHrCvypddU
+         /NWNHiANUkp6EoopvUqSiLrlG/VaGoxnyRhNIGIM27ZGJJQhzC7ZgK9pUovs741wCXcR
+         qAwiGPwYJlpPOhhqPj7kiLZXhiVfMcFowBNbk8XQKJa9g7VU+8NjMQjV3N8hl8tkROC2
+         r0JzKBu9pW7ZdMBRDyMCQ0OPZ8SBaAVYwjPV+023OYD30taHWfzXAzxMvEyLF67njtHh
+         TmAdm6FvqmxT1OK9CnxECXon42NVRinqSt/mm+BXECQoYIX4+bS09nQ6VlGfPz/Tbmni
+         92dA==
+ARC-Message-Signature: i=5; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:to:subject:message-id:date:from:in-reply-to
+         :references:mime-version:dkim-signature:delivered-to;
+        bh=b4iljwX3rxI35q39PR3wN808URZFrqGEUHXXhp9S6BU=;
+        b=cmYbfBCFffV4Nhb85Emy4Qfmv/XbCuoLIqQ4zGAgNyC8I+byIy/pjB01YO8v41OhVn
+         vzl1gUJrlWJ/5bgJ150XLsSUSqvactSaLVzU4W09RGBvwwolbIArfdm0LPAV1FuXunlb
+         zKJ4/oo3Qo1uxq0YGVs9K5NiFCVMmLgmFoDn7jqOkoqkSFwwL5OJBEKwgb/fR8hjGuuI
+         gxCNuzTQcems7FbqzeUU+4uC2UXOyeaZDmfluALFTMn4JfRhW+ZgWnGEIqlWpvJwvlzW
+         QcnIkp1BPqu9c4Eun1vgoSaKX3IG6VSjJy3hUlSWaKR/cVDHuOdB/9rTz/6FfPWQfAJ8
+         qkoA==
+ARC-Authentication-Results: i=5; mx.google.com;
+       dkim=neutral (body hash did not verify) header.i=@iitbbs.ac.in header.s=google header.b=CL483CSI;
+       arc=pass (i=4 spf=pass spfdomain=iitbbs.ac.in dkim=pass dkdomain=iitbbs.ac.in dmarc=pass fromdomain=iitbbs.ac.in);
+       spf=pass (google.com: domain of dk31+caf_=kumardinesh.deon=gmail.com@iitbbs.ac.in designates 209.85.220.41 as permitted sender) smtp.mailfrom="dk31+caf_=kumardinesh.deon=gmail.com@iitbbs.ac.in";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iitbbs.ac.in
+Return-Path: <dk31+caf_=kumardinesh.deon=gmail.com@iitbbs.ac.in>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id f75-20020a1f384e000000b003bcd69497cdsor3606834vka.30.2022.12.28.01.33.55
+        for <kumardinesh.deon@gmail.com>
+        (Google Transport Security);
+        Wed, 28 Dec 2022 01:33:55 -0800 (PST)
+Received-SPF: pass (google.com: domain of dk31+caf_=kumardinesh.deon=gmail.com@iitbbs.ac.in designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=neutral (body hash did not verify) header.i=@iitbbs.ac.in header.s=google header.b=CL483CSI;
+       arc=pass (i=4 spf=pass spfdomain=iitbbs.ac.in dkim=pass dkdomain=iitbbs.ac.in dmarc=pass fromdomain=iitbbs.ac.in);
+       spf=pass (google.com: domain of dk31+caf_=kumardinesh.deon=gmail.com@iitbbs.ac.in designates 209.85.220.41 as permitted sender) smtp.mailfrom="dk31+caf_=kumardinesh.deon=gmail.com@iitbbs.ac.in";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iitbbs.ac.in
+ARC-Seal: i=4; a=rsa-sha256; t=1672220035; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=UT2IY4qkCRmVD/icBY50CnctCls82f3fOtvxy0Nwz1wefOJUC0L8EAbhD+cFAC8B1R
+         B0fTMqQouJIHqcalrJUTvkXOo/NGmwk7b9RKd8Tjo6llJ18unPQV35kPZMPPwWrOb2It
+         GVp1pLRCbSlT2bg+CiOrP6+D2TOROcG36g1pM47oJg2jBHgpNSwIpSju46kmawBuFyuk
+         IqUTyPks+PZsE9AxbVZobYm+AdfryK4LAd5qfHlx8rEw0CUvjRP0hB+fk3X79FqV7SmU
+         o8EPbKvdFjc3AVa3JM2FMO46o3K5CrslD+zQNvhk/DSUx24aUy5bOBZYFUVInnk0AwCP
+         IkaA==
+ARC-Message-Signature: i=4; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:to:subject:message-id:date:from:in-reply-to
+         :references:mime-version:dkim-signature:delivered-to;
+        bh=b4iljwX3rxI35q39PR3wN808URZFrqGEUHXXhp9S6BU=;
+        b=Bjfuhab6nUnNoLnLiw7rHgsfHD8B7aZ2f0JpNBHttDe9P/c7rXZOwVMmSF2SM7fToQ
+         JrMnsnBsKHU7fXAFFKzUlnZs4owlh8CsNiWVAu1nGxcf9SEYyS0IZdbCq0tJHuKEH/DY
+         XH8o+L/KUwFNtxVNAcIuFREe3BFe04yBxCGGOjE3rpROI0x+JUuMUA0Vl15rbdKhHRJc
+         zR5wDkkbfNCfOIKuU9kWTRVI8obEeqlbCEvOdS49en+Z8VWdFINPzYjz1d8i3OnxIX1g
+         VjomYjBW8+ZktRKtL9sd5Hj4Z11eh8QXZ2WUR9khUNIQnYH7p8Cp7WTbKfM+SVrMVqNx
+         8gpQ==
+ARC-Authentication-Results: i=4; mx.google.com;
+       dkim=pass header.i=@iitbbs.ac.in header.s=google header.b=CL483CSI;
+       arc=pass (i=2 spf=pass spfdomain=iitbbs.ac.in dkim=pass dkdomain=iitbbs.ac.in dmarc=pass fromdomain=iitbbs.ac.in);
+       spf=pass (google.com: domain of students.mhr+bncbcv7pq6e6yjrb5u2wcoqmgqe6hhzv4i@iitbbs.ac.in designates 209.85.220.69 as permitted sender) smtp.mailfrom=students.mhr+bncBCV7PQ6E6YJRB5U2WCOQMGQE6HHZV4I@iitbbs.ac.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iitbbs.ac.in
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:x-original-authentication-results
+         :x-original-sender:to:subject:message-id:date:from:in-reply-to
+         :references:mime-version:dkim-signature:delivered-to
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=b4iljwX3rxI35q39PR3wN808URZFrqGEUHXXhp9S6BU=;
+        b=fkKswH7otzPJ4GkySXoire69OJl8Shn8+BJGuhwl9gpOvZ4Qnc341tXP0z3MkI6Oi8
+         STdbQM6/SKOczbttZyTQO4xjyJ/rMYgo86nUTzKiach7OiYDR5Qt/RSHivk23fMNGW13
+         tPfoUeN/DLtvGRRRvJ6WIwe+nRZi4goXEJUTvmgPSOx3zf73QJpdnXuLymgtcoiyzMtE
+         NDXSllg0VBL40SKqwmcb/P/aT5QjeqoHaMnzMwfoAjoDfOJZJYUHRpjzqTopLRqqOswf
+         +P46X8qxRgTYvj6RNFTuFJyCxG6EXshOuCK/+Z4hN1Kl4g8EgUpu9scZuWkaex7EubAa
+         byZw==
+X-Gm-Message-State: AFqh2koYedooYrXVMjut/kSVFDDZDOlh5Nlz80NSTwovzZHY2DVlFiGE
+	DWtKCgwjE4OtCiRZTX581OdQsLq65jRDAGoMZDTY4Gv1wkBO+9cgKtAul2Ga6mpguvC8VZ6Gtrl
+	Zq04/WVB3JXXVJzmQ1mhxuJutG4GYi82Gb7CQqD4fj6WeL0xd
+X-Received: by 2002:a05:6122:334:b0:3d0:8328:c28e with SMTP id d20-20020a056122033400b003d08328c28emr2358548vko.33.1672220035618;
+        Wed, 28 Dec 2022 01:33:55 -0800 (PST)
+X-Forwarded-To: kumardinesh.deon@gmail.com
+X-Forwarded-For: dk31@iitbbs.ac.in kumardinesh.deon@gmail.com
+Delivered-To: dk31@iitbbs.ac.in
+Received: by 2002:a59:b20a:0:b0:32a:eed4:c8ea with SMTP id s10csp3099926vqn;
+        Wed, 28 Dec 2022 01:33:54 -0800 (PST)
+X-Received: by 2002:a05:6512:23a5:b0:4b6:f027:2af8 with SMTP id c37-20020a05651223a500b004b6f0272af8mr8527701lfv.66.1672220034024;
+        Wed, 28 Dec 2022 01:33:54 -0800 (PST)
+ARC-Seal: i=3; a=rsa-sha256; t=1672220034; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=YlTfZs1yhlKmCZ1ziC5GyAizfHtphcGgGK26g2/HVTU1LAEyelYGl/K9XxPDuJvzhy
+         Me6mhFf6PdRnKjqNpjkn1v/Fg4jCIUME9JtkReBUcFvmPNZusNIy8jX4QVYAq2GSPpDN
+         b0LI+guVYnS1+M2F2LZJ+j+5RACOmCOVOHbBHn+xukwj7Zlq7BduqLNbHQnnu4MKw2VU
+         O8BWmTpJc98k9mdZmhZxtf53JBitWpofBkhDdwVv9yLicS3uDYegDR5tzJm2UNR5bNZR
+         IFQXdaQfpWF2kYqNTr05EU74aM6xIBV2QecB71qs822rta0hAn9tW2hO7XsCAtU7F3QS
+         YH+A==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:to:subject:message-id:date:from:in-reply-to
+         :references:mime-version:dkim-signature;
+        bh=yhMWvCBLYy43Vq+rM7fBXOWUUkRBYl9AsbYyMbSQb/0=;
+        b=BNCJ86o4UyNR+x35hIFJ98tYo0gevNh+jDVWePZCkR8hQt/NVZkUw3boUFUdcExisY
+         fheIAKh40W4z/E+d+foq3C5fbhnZMfdp7xSMAwiBxemKci+xK4sG3A56RTrOcPQ5H0c+
+         RpHW3TlVhoib37fGYfVrZfGPqKIKzkptmTvIxXzeD/4V15ITAVMWeiFW7W0je6T9zGEk
+         XkPo83D7m38BySivu5+6wSnX6nH2LdYYaot/savYr6O8dg2Wp8ZZl7GitKOjVsTe51+f
+         w8L1YJXprPvkRxfbpSv272YS3EBv2BGrIXGAGK+bqros0Mn45sjzdDFcLWJ6KJUZ/FVl
+         1wOQ==
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@iitbbs.ac.in header.s=google header.b=CL483CSI;
+       arc=pass (i=2 spf=pass spfdomain=iitbbs.ac.in dkim=pass dkdomain=iitbbs.ac.in dmarc=pass fromdomain=iitbbs.ac.in);
+       spf=pass (google.com: domain of students.mhr+bncbcv7pq6e6yjrb5u2wcoqmgqe6hhzv4i@iitbbs.ac.in designates 209.85.220.69 as permitted sender) smtp.mailfrom=students.mhr+bncBCV7PQ6E6YJRB5U2WCOQMGQE6HHZV4I@iitbbs.ac.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iitbbs.ac.in
+Return-Path: <students.mhr+bncBCV7PQ6E6YJRB5U2WCOQMGQE6HHZV4I@iitbbs.ac.in>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id e20-20020ac24e14000000b004b595390696sor2861137lfr.76.2022.12.28.01.33.53
+        for <dk31@iitbbs.ac.in>
+        (Google Transport Security);
+        Wed, 28 Dec 2022 01:33:54 -0800 (PST)
+Received-SPF: pass (google.com: domain of students.mhr+bncbcv7pq6e6yjrb5u2wcoqmgqe6hhzv4i@iitbbs.ac.in designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+ARC-Seal: i=2; a=rsa-sha256; t=1672220033; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=ReEOGTAo7m2Z/XzCqa935cHr4iCt/t922Y908bI4I83X4t88MzbmKwTNn+DlunVe7g
+         2nrrHK+OobXVWgtLEVHg+UBwGGdhJZnEk07UMPA5PiRlp/QhyoNelnOnrpBFgYvjZAJI
+         m7LlGeOF9QNCvtY5MpNLDzpQAPdzSS0eu2ytF1ihwKaeX2f6QZ1o9EFSlcx1MPVNnkNO
+         lo/IwitwQjP6qkworn3eQ2U2XpJxWd929ExHGmj4omryTUl/g8tqhg9AUqHaXCejNwZg
+         sBECA5L42/wWHure5Q/yfo7mR71q69O5Xn/YBXOgRKkm9H2KJiAlKIUejQtB0kz6CdPT
+         yWeg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:to:subject:message-id:date:from:in-reply-to
+         :references:mime-version:dkim-signature;
+        bh=yhMWvCBLYy43Vq+rM7fBXOWUUkRBYl9AsbYyMbSQb/0=;
+        b=arkyW9bObac0ZppfAHOpGpUHm7KvD7BMUNJZfLHkt6f8lnOIeUMnjLr9VkFUjK7GvL
+         kfftJVGOKI7dfSrc4DrHePtlW/i1tHMITbFeQ9+O2qB8fVs7r/e46EHCTjQF1p+4fZjg
+         nM+cP16Gv4SC1OJW/k1QhKnJAMWsQGGMiTUxb/nEOfN+LE0a53uaMMBUBwTYmylveI7k
+         j+z9vEASS9rlQo485F3P3ett3dgbsJ72V6irxvsqK0rkaV+f6klJt01YURnp08MLDThD
+         SFqA02mHf++yatHxrF/3J8BQzCbhqG6M2Eg8ZUKcxh8sw2RMT5jXxgrJ7JqmDYKp6pSm
+         ZOaA==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@iitbbs.ac.in header.s=google header.b=DcaKLRpe;
+       spf=pass (google.com: domain of gsec.mhr@iitbbs.ac.in designates 209.85.220.41 as permitted sender) smtp.mailfrom=gsec.mhr@iitbbs.ac.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iitbbs.ac.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=iitbbs.ac.in; s=google;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:x-original-authentication-results
+         :x-original-sender:to:subject:message-id:date:from:in-reply-to
+         :references:mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=yhMWvCBLYy43Vq+rM7fBXOWUUkRBYl9AsbYyMbSQb/0=;
+        b=CL483CSIsMtBQ+ncz8+AwD/DcUbsz9VJshX1f+WvY2jiwFoFsimRAHd/hSjdF3osgu
+         ZUqAwh4/TWKmwMdgIvpWaeoCGqWxy5X4xS2XP6DHu1vKet3yZzTc9Kdo6lcSjbPWPQCi
+         WXT7dVAdZd4eC3tKX76/KNk0d9uLvA9xjwr44=
+X-Google-Smtp-Source: AMrXdXv3bIxQA6j2JByyNPjLnLAv6FsYoRHt7dC8A78b/hSZ7MBL3DI3y5IbticBoacdQfzW2AWfMw==
+X-Received: by 2002:a05:6402:3cd:b0:483:346d:53b6 with SMTP id t13-20020a05640203cd00b00483346d53b6mr1374015edw.269.1672220022623;
+        Wed, 28 Dec 2022 01:33:42 -0800 (PST)
+X-BeenThere: students.mhr@iitbbs.ac.in
+Received: by 2002:a17:906:8694:b0:7ba:e42f:6f2e with SMTP id
+ g20-20020a170906869400b007bae42f6f2els8942209ejx.6.-pod-prod-gmail; Wed, 28
+ Dec 2022 01:33:41 -0800 (PST)
+X-Received: by 2002:a17:907:8e93:b0:7bf:3627:df32 with SMTP id tx19-20020a1709078e9300b007bf3627df32mr20935823ejc.75.1672220021213;
+        Wed, 28 Dec 2022 01:33:41 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1672220021; cv=none;
+        d=google.com; s=arc-20160816;
+        b=nS/j9fMgmiD5WpoN9fvxv/vntISz94QT6AjPNZwEej8ASmODNZLz6OnhL+gWQmWGyo
+         lOT5ISu3LqFDPb5cJs7biuHz7/efwGsepvi/dwwo4Gh+TfG6d0xLWlogGABqueD6WA0f
+         iOVZ9wAYLVL+mYgK+tzLg/hWWXqYoVwTsJXaPvFDrnOQW3o/Qbdp+phFuc3TCaxWOZzv
+         3OjvY3NKLz4VQjkm8PlzIz672VB12Za840U1XtiwmNs1WHHHqNoftm7YiCF1//TQY4Ic
+         ag2l3qYTvir5agusKdaMgQ9TIFVF5qdR1hGB+U+YlAEQohxZWQrHumc8ONhsHMDn2J9+
+         ygog==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=yhMWvCBLYy43Vq+rM7fBXOWUUkRBYl9AsbYyMbSQb/0=;
+        b=bO9sNhzgWjfcmRbwy/fbEN5DJMUB8UIoyqVkWNQLCGvm/SNWUoxqI3bb/mI0pWMsAf
+         HoG/dNIMlpvgd7Q3Bu+bS6kpG7z/j//TCy7hNMO2RM8/q/XuVf0TpiRUjcqLmmzurdGf
+         Hvd/Sb68opLCIhAuvml/gwHR0XAhyjxj4s9mu5NHRXJDmJsm/dsMxyWlm6KFcLjqTPSO
+         9A28Bzt6gu3ln+qAVNP9MXNNpjIN/9rMPNd+MALemDa0kJX5kR4HNZpCPlxESs0HSaGE
+         FR88OZibieRhvQ0BWYPlGxFX1GilqHO83woQunbiOkzJUFddCCZmz8MFHrTsNC8dUKOh
+         izcg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@iitbbs.ac.in header.s=google header.b=DcaKLRpe;
+       spf=pass (google.com: domain of gsec.mhr@iitbbs.ac.in designates 209.85.220.41 as permitted sender) smtp.mailfrom=gsec.mhr@iitbbs.ac.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iitbbs.ac.in
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id j15-20020a170906474f00b007ae298b9e76sor6518419ejs.121.2022.12.28.01.33.39
+        for <students.mhr@iitbbs.ac.in>
+        (Google Transport Security);
+        Wed, 28 Dec 2022 01:33:39 -0800 (PST)
+Received-SPF: pass (google.com: domain of gsec.mhr@iitbbs.ac.in designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+X-Received: by 2002:a17:906:a10d:b0:7f7:a985:181f with SMTP id
+ t13-20020a170906a10d00b007f7a985181fmr2244858ejy.523.1672220019249; Wed, 28
+ Dec 2022 01:33:39 -0800 (PST)
+MIME-Version: 1.0
+References: <CAE7S9=_hL+2pFNDktyANU3n-ptn_9AbXXZD6DS=O=y4GFOGDdw@mail.gmail.com>
+In-Reply-To: <CAE7S9=_hL+2pFNDktyANU3n-ptn_9AbXXZD6DS=O=y4GFOGDdw@mail.gmail.com>
+From: General Secretary MHR <gsec.mhr@iitbbs.ac.in>
+Date: Wed, 28 Dec 2022 15:03:26 +0530
+Message-ID: <CAE7yC5GVfhf8GvAhnzHk3cCjwOQ6eJfCe185_7ByFgGtBkYvJQ@mail.gmail.com>
+Subject: Fwd: Menu for the Special Dinner
+To: MHR Students IIT Bhubaneswar <students.mhr@iitbbs.ac.in>
+X-Original-Sender: gsec.mhr@iitbbs.ac.in
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@iitbbs.ac.in header.s=google header.b=DcaKLRpe;       spf=pass
+ (google.com: domain of gsec.mhr@iitbbs.ac.in designates 209.85.220.41 as
+ permitted sender) smtp.mailfrom=gsec.mhr@iitbbs.ac.in;       dmarc=pass
+ (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iitbbs.ac.in
+Precedence: list
+Mailing-list: list students.mhr@iitbbs.ac.in; contact students.mhr+owners@iitbbs.ac.in
+List-ID: <students.mhr.iitbbs.ac.in>
+X-Google-Group-Id: 1061383921978
+List-Post: <https://groups.google.com/a/iitbbs.ac.in/group/students.mhr/post>, <mailto:students.mhr@iitbbs.ac.in>
+List-Help: <https://support.google.com/a/iitbbs.ac.in/bin/topic.py?topic=25838>,
+ <mailto:students.mhr+help@iitbbs.ac.in>
+List-Archive: <https://groups.google.com/a/iitbbs.ac.in/group/students.mhr/>
+List-Unsubscribe: <mailto:googlegroups-manage+1061383921978+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/iitbbs.ac.in/group/students.mhr/subscribe>
+Content-Type: multipart/alternative; boundary="0000000000003bee7b05f0e010d3"
+
+--0000000000003bee7b05f0e010d3
+Content-Type: text/plain; charset="UTF-8"
+
+---------- Forwarded message ---------
+From: Mess Secretary MHR IIT Bhubaneswar <messsecretary.mhr@iitbbs.ac.in>
+Date: Wed, 28 Dec 2022, 15:02
+Subject: Menu for the Special Dinner
+To: General Secretary MHR <gsec.mhr@iitbbs.ac.in>
+
+
+Dear Residents,
+
+We will be having a special dinner this Friday (30/12/22).
+Menu for the dinner has been mentioned below :
+
+
+VEG NON VEG
+Chilli Paneer Chilli Chicken
+Kaju Paneer Chicken Kassa
+COMMON ITEMS
+Corn Fry
+Dal Fry
+Pulao
+Lachha Paratha
+Ice Cream
+Chocolate Syrup
+Hot Gulab Jamun
+Fruit Punch
+Corn Soup
+With Regards
+Chandra Sathvik
+Mess Secretary
+MHR
+
+
+------------------------------
+*Disclaimer: *This email and any files transmitted with it are confidential
+and intended solely for the use of the individual or entity to whom they
+are addressed. If you have received this email in error please notify the
+system manager. This message contains confidential information and is
+intended only for the individual named. If you are not the named addressee
+you should not disseminate, distribute or copy this e-mail. Please notify
+the sender immediately by e-mail if you have received this e-mail by
+mistake and delete this e-mail from your system. If you are not the
+intended recipient you are notified that disclosing, copying, distributing
+or taking any action in reliance on the contents of this information is
+strictly prohibited.
+
+-- 
+*Disclaimer: *This email and any files transmitted with it are confidential 
+and intended solely for the use of the individual or entity to whom they 
+are addressed. If you have received this email in error please notify the 
+system manager. This message contains confidential information and is 
+intended only for the individual named. If you are not the named addressee 
+you should not disseminate, distribute or copy this e-mail. Please notify 
+the sender immediately by e-mail if you have received this e-mail by 
+mistake and delete this e-mail from your system. If you are not the 
+intended recipient you are notified that disclosing, copying, distributing 
+or taking any action in reliance on the contents of this information is 
+strictly prohibited.
+
+-- 
+*Disclaimer: *This email and any files transmitted with it are confidential 
+and intended solely for the use of the individual or entity to whom they 
+are addressed. If you have received this email in error please notify the 
+system manager. This message contains confidential information and is 
+intended only for the individual named. If you are not the named addressee 
+you should not disseminate, distribute or copy this e-mail. Please notify 
+the sender immediately by e-mail if you have received this e-mail by 
+mistake and delete this e-mail from your system. If you are not the 
+intended recipient you are notified that disclosing, copying, distributing 
+or taking any action in reliance on the contents of this information is 
+strictly prohibited.
+
+--0000000000003bee7b05f0e010d3
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" cla=
+ss=3D"gmail_attr">---------- Forwarded message ---------<br>From: <strong c=
+lass=3D"gmail_sendername" dir=3D"auto">Mess Secretary MHR IIT Bhubaneswar</=
+strong> <span dir=3D"auto">&lt;<a href=3D"mailto:messsecretary.mhr@iitbbs.a=
+c.in">messsecretary.mhr@iitbbs.ac.in</a>&gt;</span><br>Date: Wed, 28 Dec 20=
+22, 15:02<br>Subject: Menu for the Special Dinner<br>To: General Secretary =
+MHR &lt;<a href=3D"mailto:gsec.mhr@iitbbs.ac.in">gsec.mhr@iitbbs.ac.in</a>&=
+gt;<br></div><br><br><div dir=3D"ltr">Dear Residents,<div><br></div><div><d=
+iv>We will be having a special dinner this Friday (30/12/22).=C2=A0</div><d=
+iv>Menu for the dinner has been mentioned below :</div></div><div><br></div=
+><div><br></div><div><div><table width=3D"260" style=3D"border-collapse:col=
+lapse;width:195pt"><colgroup><col width=3D"139" style=3D"width:104pt"><col =
+width=3D"121" style=3D"width:91pt"></colgroup><tbody><tr height=3D"20" styl=
+e=3D"height:15pt"><td width=3D"139" height=3D"20" style=3D"width:104pt;heig=
+ht:15pt;color:black;font-weight:700;font-family:Calibri;text-align:center;b=
+order:0.5pt solid black;padding-top:1px;padding-right:1px;padding-left:1px;=
+font-size:11pt;vertical-align:bottom;white-space:nowrap">VEG</td><td width=
+=3D"121" style=3D"width:91pt;color:black;font-weight:700;font-family:Calibr=
+i;text-align:center;border:0.5pt solid black;padding-top:1px;padding-right:=
+1px;padding-left:1px;font-size:11pt;vertical-align:bottom;white-space:nowra=
+p">NON VEG</td></tr><tr height=3D"20" style=3D"height:15pt"><td height=3D"2=
+0" style=3D"height:15pt;color:black;font-family:Calibri;text-align:center;b=
+order:0.5pt solid black;padding-top:1px;padding-right:1px;padding-left:1px;=
+font-size:11pt;vertical-align:bottom;white-space:nowrap">Chilli Paneer</td>=
+<td style=3D"color:black;font-family:Calibri;text-align:center;border:0.5pt=
+ solid black;padding-top:1px;padding-right:1px;padding-left:1px;font-size:1=
+1pt;vertical-align:bottom;white-space:nowrap">Chilli Chicken</td></tr><tr h=
+eight=3D"20" style=3D"height:15pt"><td height=3D"20" style=3D"height:15pt;t=
+ext-align:center;vertical-align:middle;border:0.5pt solid black;padding-top=
+:1px;padding-right:1px;padding-left:1px;color:black;font-size:11pt;font-fam=
+ily:Calibri,sans-serif;white-space:nowrap">Kaju Paneer</td><td style=3D"tex=
+t-align:center;border:0.5pt solid black;padding-top:1px;padding-right:1px;p=
+adding-left:1px;color:black;font-size:11pt;font-family:Calibri,sans-serif;v=
+ertical-align:bottom;white-space:nowrap">Chicken Kassa</td></tr><tr height=
+=3D"20" style=3D"height:15pt"><td colspan=3D"2" width=3D"260" height=3D"20"=
+ style=3D"width:195pt;height:15pt;color:black;font-weight:700;font-family:C=
+alibri;text-align:center;border:0.5pt solid black;padding-top:1px;padding-r=
+ight:1px;padding-left:1px;font-size:11pt;vertical-align:bottom;white-space:=
+nowrap">COMMON ITEMS</td></tr><tr height=3D"20" style=3D"height:15pt"><td c=
+olspan=3D"2" width=3D"260" height=3D"20" style=3D"width:195pt;height:15pt;t=
+ext-align:center;border:0.5pt solid black;padding-top:1px;padding-right:1px=
+;padding-left:1px;color:black;font-size:11pt;font-family:Calibri,sans-serif=
+;vertical-align:bottom;white-space:nowrap">Corn Fry</td></tr><tr height=3D"=
+20" style=3D"height:15pt"><td colspan=3D"2" width=3D"260" height=3D"20" sty=
+le=3D"width:195pt;height:15pt;text-align:center;border:0.5pt solid black;pa=
+dding-top:1px;padding-right:1px;padding-left:1px;color:black;font-size:11pt=
+;font-family:Calibri,sans-serif;vertical-align:bottom;white-space:nowrap">D=
+al Fry</td></tr><tr height=3D"20" style=3D"height:15pt"><td colspan=3D"2" w=
+idth=3D"260" height=3D"20" style=3D"width:195pt;height:15pt;text-align:cent=
+er;border:0.5pt solid black;padding-top:1px;padding-right:1px;padding-left:=
+1px;color:black;font-size:11pt;font-family:Calibri,sans-serif;vertical-alig=
+n:bottom;white-space:nowrap">Pulao</td></tr><tr height=3D"20" style=3D"heig=
+ht:15pt"><td colspan=3D"2" width=3D"260" height=3D"20" style=3D"width:195pt=
+;height:15pt;text-align:center;border:0.5pt solid black;padding-top:1px;pad=
+ding-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:Cali=
+bri,sans-serif;vertical-align:bottom;white-space:nowrap">Lachha Paratha</td=
+></tr><tr height=3D"20" style=3D"height:15pt"><td colspan=3D"2" width=3D"26=
+0" height=3D"20" style=3D"width:195pt;height:15pt;text-align:center;border:=
+0.5pt solid black;padding-top:1px;padding-right:1px;padding-left:1px;color:=
+black;font-size:11pt;font-family:Calibri,sans-serif;vertical-align:bottom;w=
+hite-space:nowrap">Ice Cream</td></tr><tr height=3D"20" style=3D"height:15p=
+t"><td colspan=3D"2" width=3D"260" height=3D"20" style=3D"width:195pt;heigh=
+t:15pt;text-align:center;border:0.5pt solid black;padding-top:1px;padding-r=
+ight:1px;padding-left:1px;color:black;font-size:11pt;font-family:Calibri,sa=
+ns-serif;vertical-align:bottom;white-space:nowrap">Chocolate Syrup</td></tr=
+><tr height=3D"20" style=3D"height:15pt"><td colspan=3D"2" width=3D"260" he=
+ight=3D"20" style=3D"width:195pt;height:15pt;text-align:center;border:0.5pt=
+ solid black;padding-top:1px;padding-right:1px;padding-left:1px;color:black=
+;font-size:11pt;font-family:Calibri,sans-serif;vertical-align:bottom;white-=
+space:nowrap">Hot Gulab Jamun</td></tr><tr height=3D"20" style=3D"height:15=
+pt"><td colspan=3D"2" width=3D"260" height=3D"20" style=3D"width:195pt;heig=
+ht:15pt;text-align:center;border:0.5pt solid black;padding-top:1px;padding-=
+right:1px;padding-left:1px;color:black;font-size:11pt;font-family:Calibri,s=
+ans-serif;vertical-align:bottom;white-space:nowrap">Fruit Punch</td></tr><t=
+r height=3D"20" style=3D"height:15pt"><td colspan=3D"2" width=3D"260" heigh=
+t=3D"20" style=3D"width:195pt;height:15pt;text-align:center;border:0.5pt so=
+lid black;padding-top:1px;padding-right:1px;padding-left:1px;color:black;fo=
+nt-size:11pt;font-family:Calibri,sans-serif;vertical-align:bottom;white-spa=
+ce:nowrap">Corn Soup</td></tr></tbody></table><br></div></div><div><div>Wit=
+h Regards</div><div>Chandra Sathvik</div><div>Mess Secretary</div><font col=
+or=3D"#888888">MHR</font></div><div><br></div></div>
+
+<br>
+<hr><font face=3D"Verdana" size=3D"1"><b>Disclaimer: </b>This email and any=
+ files transmitted with it are confidential and intended solely for the use=
+ of the individual or entity to whom they are addressed. If you have receiv=
+ed this email in error please notify the system manager. This message conta=
+ins confidential information and is intended only for the individual named.=
+ If you are not the named addressee you should not disseminate, distribute =
+or copy this e-mail. Please notify the sender immediately by e-mail if you =
+have received this e-mail by mistake and delete this e-mail from your syste=
+m. If you are not the intended recipient you are notified that disclosing, =
+copying, distributing or taking any action in reliance on the contents of t=
+his information is strictly prohibited.</font></div>
+
+<br>
+<hr><font face=3D"Verdana" size=3D"1"><b>Disclaimer: </b>This email and any=
+ files transmitted with it are confidential and intended solely for the use=
+ of the individual or entity to whom they are addressed. If you have receiv=
+ed this email in error please notify the system manager. This message conta=
+ins confidential information and is intended only for the individual named.=
+ If you are not the named addressee you should not disseminate, distribute =
+or copy this e-mail. Please notify the sender immediately by e-mail if you =
+have received this e-mail by mistake and delete this e-mail from your syste=
+m. If you are not the intended recipient you are notified that disclosing, =
+copying, distributing or taking any action in reliance on the contents of t=
+his information is strictly prohibited.</font>
+<br>
+<hr><font face=3D"Verdana" size=3D"1"><b>Disclaimer: </b>This email and any=
+ files transmitted with it are confidential and intended solely for the use=
+ of the individual or entity to whom they are addressed. If you have receiv=
+ed this email in error please notify the system manager. This message conta=
+ins confidential information and is intended only for the individual named.=
+ If you are not the named addressee you should not disseminate, distribute =
+or copy this e-mail. Please notify the sender immediately by e-mail if you =
+have received this e-mail by mistake and delete this e-mail from your syste=
+m. If you are not the intended recipient you are notified that disclosing, =
+copying, distributing or taking any action in reliance on the contents of t=
+his information is strictly prohibited.</font>
+--0000000000003bee7b05f0e010d3--
